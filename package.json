@@ -1,0 +1,12 @@
+{
+	"private": true,
+	"packageManager": "pnpm@6.32.3",
+	"description": "Celebrate UI Monorepo.",
+	"license": "MIT",
+	"engines": {
+		"node": ">= 16"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	}
+}
