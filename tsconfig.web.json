@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "lib": ["es2018", "dom"],
+    "jsx": "preserve",
+    "skipLibCheck": true
+  },
+  "include": [
+    "packages/vue*/src/**/*",
+    "packages/utils/src/**/*",
+    "packages/constants/src/**/*",
+    "packages/celebrate-ui/src/**/*",
+    "packages/web-env.d.ts",
+    "packages/*/package.json"
+  ],
+  "exclude": ["packages/**/__tests__/**"]
+}

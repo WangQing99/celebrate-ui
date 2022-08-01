@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.web.json",
+  "compilerOptions": {
+    "composite": true,
+    "types": []
+  },
+  "include": [
+    "packages/vue*/src/**/*",
+    "packages/utils/src/**/*",
+    "packages/constants/src/**/*",
+    "packages/celebrate-ui/src/**/*",
+    "packages/web-env.d.ts",
+    "packages/*/package.json",
+    "playground/main.ts",
+    "playground/env.d.ts",
+    "playground/src/**/*"
+  ],
+  "exclude": ["packages/**/__tests__/**"]
+}

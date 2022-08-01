@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "types": ["node", "vitest"],
+    "skipLibCheck": true,
+    "lib": ["es2021"]
+  },
+  "include": [
+    "**/vite.config.*",
+    "**/vitest.config.*",
+    "**/vite.init.*",
+    "packages/build*/src/**/*",
+    "packages/build*/package.json"
+  ],
+  "exclude": ["**/dist"]
+}
