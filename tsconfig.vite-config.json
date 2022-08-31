@@ -1,17 +1,13 @@
 {
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "composite": true,
-    "types": ["node", "vitest"],
-    "skipLibCheck": true,
-    "lib": ["es2021"]
-  },
+  "extends": "@celebrate-ui/tsconfig/tsconfig.vite-config.json",
   "include": [
     "**/vite.config.*",
     "**/vitest.config.*",
     "**/vite.init.*",
-    "packages/build*/src/**/*",
-    "packages/build*/package.json"
+    "packages/node/*/src/**/*",
+    "packages/node/*/package.json"
   ],
-  "exclude": ["**/dist"]
+  "compilerOptions": {
+    "composite": true
+  }
 }

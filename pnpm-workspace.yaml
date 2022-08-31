@@ -1,5 +1,5 @@
 packages:
-  - packages/*
-  - internal/*
   - docs
+  - packages/web/*
+  - packages/node/*
   - playground

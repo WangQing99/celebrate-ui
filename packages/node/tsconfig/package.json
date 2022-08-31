@@ -1,0 +1,13 @@
+{
+  "name": "@celebrate-ui/tsconfig",
+  "version": "1.0.0",
+  "description": "tsconfig for Celebrate UI.",
+  "type": "module",
+  "keywords": [
+    "celebrate-ui",
+    "celebrate",
+    "component library",
+    "ui framework",
+    "tsconfig"
+  ]
+}

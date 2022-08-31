@@ -1,0 +1,30 @@
+{
+  "name": "@celebrate-ui/base-components",
+  "version": "1.0.0",
+  "description": "Vue component for Celebrate UI.",
+  "keywords": [
+    "celebrate-ui",
+    "celebrate",
+    "component library",
+    "ui framework",
+    "ui",
+    "vue",
+    "components"
+  ],
+  "author": "WQ",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {},
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "devDependencies": {
+    "element-plus": "^2.2.15",
+    "vue": "^3.2.31"
+  },
+  "dependencies": {
+    "@celebrate-ui/utils": "workspace:*"
+  }
+}

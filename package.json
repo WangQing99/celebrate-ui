@@ -1,17 +1,21 @@
 {
-	"private": true,
-	"packageManager": "pnpm@6.32.3",
-	"description": "Celebrate UI Monorepo.",
-	"license": "MIT",
-	"engines": {
-		"node": ">= 16"
-	},
-	"scripts": {
-		"dev": "pnpm -C playground dev",
-		"typecheck": "pnpm vue-tsc --noEmit -p tsconfig.web.json --composite false && pnpm vue-tsc --noEmit -p tsconfig.playground.json --composite false && pnpm tsc --noEmit -p tsconfig.node.json && pnpm tsc --noEmit -p tsconfig.vite-config.json && pnpm vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
-	},
-	"devDependencies": {
-		"@celebrate-ui/eslint-config": "workspace:^1.0.0",
-		"@types/node": "*"
-	}
+  "private": true,
+  "packageManager": "pnpm@7.6.0",
+  "description": "Celebrate UI Monorepo.",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 16"
+  },
+  "scripts": {
+    "dev": "pnpm -C playground dev"
+  },
+  "devDependencies": {
+    "@celebrate-ui/eslint-config": "workspace:*",
+    "@celebrate-ui/tsconfig": "workspace:*",
+    "@types/node": "*",
+    "@vue/runtime-core": "^3.2.38",
+    "rimraf": "^3.0.2",
+    "unplugin-vue-define-options": "^0.11.1",
+    "vitest": "^0.22.1"
+  }
 }
