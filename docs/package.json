@@ -11,12 +11,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@docsearch/react": "^3.2.1",
-    "vitepress": "1.0.0-alpha.13",
+    "element-plus": "^2.2.15",
+    "vitepress": "0.22.4",
     "vitepress-theme-demoblock": "^1.4.2"
-  },
-  "dependencies": {
-    "@docsearch/css": "^3.2.1",
-    "@docsearch/js": "^3.2.1"
   }
 }

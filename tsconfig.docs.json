@@ -1,5 +1,5 @@
 {
-  "extends": "@element-plus-next/tsconfig/tsconfig.docs.json",
+  "extends": "@celebrate-ui/tsconfig/tsconfig.docs.json",
   "include": ["docs", "docs/.vitepress"],
   "exclude": [],
   "compilerOptions": {

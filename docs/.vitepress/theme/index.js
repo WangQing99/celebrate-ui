@@ -1,11 +1,12 @@
 import theme from 'vitepress/dist/client/theme-default'
-import 'vitepress-theme-demoblock/theme/styles/index.css'
-import { registerComponents } from './register-components'
 import './styles/index.css'
+
+import ElementPlus from 'element-plus'
+import 'element-plus/theme-chalk/index.css'
 
 export default {
   ...theme,
   enhanceApp({ app }) {
-    registerComponents(app)
+    app.use(ElementPlus)
   },
 }

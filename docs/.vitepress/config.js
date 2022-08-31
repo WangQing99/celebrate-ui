@@ -3,7 +3,7 @@ const nav = require('./configs/nav')
 const sidebar = require('./configs/sidebar')
 
 module.exports = {
-  title: '@fb/components',
+  title: '@wang-qing/celebrate-ui',
   description: 'Life is short, Keep it simple.',
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
   base,
