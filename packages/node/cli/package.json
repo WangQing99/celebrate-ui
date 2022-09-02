@@ -1,0 +1,44 @@
+{
+  "name": "@celebrate-ui/cli",
+  "version": "1.0.0",
+  "description": "ESLint config for Celebrate UI.",
+  "type": "module",
+  "keywords": [
+    "celebrate-ui",
+    "celebrate",
+    "component library",
+    "ui framework",
+    "ui",
+    "vue",
+    "eslint-config"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "dev": "./src/index.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./*": "./*"
+  },
+  "bin": {
+    "ce-cli": "./bin/ce-cli.sh"
+  },
+  "scripts": {
+    "build": "./bin/ce-cli.sh build",
+    "clean": "rimraf ./dist"
+  },
+  "dependencies": {
+    "@celebrate-ui/build": "workspace:*",
+    "commander": "^9.4.0"
+  },
+  "devDependencies": {
+    "@celebrate-ui/cli-published": "npm:@celebrate-ui/cli@1.0.0"
+  }
+}

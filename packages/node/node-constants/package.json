@@ -1,0 +1,33 @@
+{
+  "name": "@celebrate-ui/node-constants",
+  "version": "1.0.0",
+  "description": "ESLint config for Celebrate UI.",
+  "type": "module",
+  "keywords": [
+    "celebrate-ui",
+    "celebrate",
+    "component library",
+    "ui framework",
+    "ui",
+    "vue",
+    "eslint-config"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "dev": "./src/index.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./*": "./*"
+  },
+  "scripts": {
+    "build": "ce-cli build",
+    "clean": "rimraf ./dist"
+  }
+}

@@ -7,13 +7,21 @@
     "node": ">= 16"
   },
   "scripts": {
-    "dev": "pnpm -C playground dev"
+    "dev": "pnpm -C playground dev",
+    "build": "run-s build:node build:web",
+    "build:node": "pnpm run --filter \"./packages/node/*\" --stream build",
+    "build:web": "pnpm run --filter \"./packages/web/*\" --stream build",
+    "ci:build": "CE_BUILD=dev nr build:node && CE_BUILD=bundle nr build:web",
+    "clean": "pnpm run -r --parallel clean"
   },
   "devDependencies": {
+    "@celebrate-ui/build-published": "npm:@celebrate-ui/build@1.0.0",
+    "@celebrate-ui/cli": "workspace:*",
     "@celebrate-ui/eslint-config": "workspace:*",
     "@celebrate-ui/tsconfig": "workspace:*",
     "@types/node": "*",
     "@vue/runtime-core": "^3.2.38",
+    "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
     "unplugin-vue-define-options": "^0.11.1",
     "vitest": "^0.22.1"
