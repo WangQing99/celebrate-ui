@@ -27,7 +27,6 @@
     "./*": "./*"
   },
   "scripts": {
-    "build": "ce-cli build",
     "clean": "rimraf ./dist"
   }
 }
