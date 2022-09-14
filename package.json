@@ -12,12 +12,14 @@
     "build:node": "pnpm run --filter \"./packages/node/*\" --stream build",
     "build:web": "pnpm run --filter \"./packages/web/*\" --stream build",
     "ci:build": "CE_BUILD=dev nr build:node",
-    "clean": "pnpm run -r --parallel clean"
+    "clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
+    "clean:dist": "rimraf dist"
   },
   "devDependencies": {
     "@celebrate-ui/cli": "workspace:*",
     "@celebrate-ui/eslint-config": "workspace:*",
     "@celebrate-ui/tsconfig": "workspace:*",
+    "@types/gulp": "^4.0.9",
     "@types/node": "*",
     "@vue/runtime-core": "^3.2.38",
     "npm-run-all": "^4.1.5",
@@ -25,5 +27,17 @@
     "typescript": "^4.7.4",
     "unplugin-vue-define-options": "^0.11.1",
     "vitest": "^0.22.1"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "vite",
+        "react",
+        "react-dom"
+      ]
+    }
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix"
   }
 }

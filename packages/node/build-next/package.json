@@ -1,0 +1,60 @@
+{
+  "name": "@celebrate-ui/build-next",
+  "version": "1.0.0",
+  "description": "ESLint config for Celebrate UI.",
+  "type": "module",
+  "keywords": [
+    "celebrate-ui",
+    "celebrate",
+    "component library",
+    "ui framework",
+    "ui",
+    "vue",
+    "eslint-config"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "dev": "./src/index.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./config": {
+      "dev": "./src/config.ts",
+      "require": "./dist/config.cjs",
+      "import": "./dist/config.js"
+    },
+    "./*": "./*"
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "rimraf ./dist"
+  },
+  "devDependencies": {
+    "tsx": "^3.9.0",
+    "vue": "^3.2.31"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
+  "dependencies": {
+    "@celebrate-ui/node-constants": "workspace:*",
+    "@celebrate-ui/node-utils": "workspace:*",
+    "@celebrate-ui/workspace": "workspace:*",
+    "esbuild": "^0.15.6",
+    "local-pkg": "^0.4.2",
+    "tsup": "^6.2.3",
+    "unconfig": "^0.3.5",
+    "unplugin-vue": "3.0.3-1"
+  }
+}

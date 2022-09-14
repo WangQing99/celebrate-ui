@@ -1,59 +1,26 @@
 {
   "name": "@celebrate-ui/build",
-  "version": "1.0.0",
-  "description": "ESLint config for Celebrate UI.",
-  "type": "module",
-  "keywords": [
-    "celebrate-ui",
-    "celebrate",
-    "component library",
-    "ui framework",
-    "ui",
-    "vue",
-    "eslint-config"
-  ],
-  "license": "MIT",
-  "files": [
-    "dist"
-  ],
-  "module": "./dist/index.js",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Build Toolchain for Celebrate UI",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "dev": "./src/index.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
-    },
-    "./config": {
-      "dev": "./src/config.ts",
-      "require": "./dist/config.cjs",
-      "import": "./dist/config.js"
-    },
-    "./*": "./*"
-  },
   "scripts": {
-    "clean": "rimraf ./dist"
+    "start": "gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts"
   },
-  "devDependencies": {
-    "tsx": "^3.9.0",
-    "vue": "^3.2.31"
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./*"
-      ]
-    }
+  "peerDependencies": {
+    "vue": "^3.2.25"
   },
   "dependencies": {
-    "@celebrate-ui/node-constants": "workspace:*",
+    "gulp": "^4.0.2",
+    "rollup": "^2.79.0"
+  },
+  "devDependencies": {
     "@celebrate-ui/node-utils": "workspace:*",
-    "@celebrate-ui/workspace": "workspace:*",
-    "esbuild": "^0.15.6",
-    "local-pkg": "^0.4.2",
-    "tsup": "^6.2.3",
-    "unconfig": "^0.3.5",
-    "unplugin-vue": "3.0.3-1"
+    "@esbuild-kit/cjs-loader": "^2.3.3",
+    "@pnpm/types": "^8.5.0",
+    "unbuild": "^0.8.10",
+    "vue": "^3.2.31"
   }
 }

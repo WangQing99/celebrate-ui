@@ -41,6 +41,8 @@ export const getPackage = async (
   packageName?: string
 ): Promise<Project | undefined> => {
   const pkgs = await getWorkspacePackages()
+  console.log('[ pkgs ] >', pkgs)
+  console.log('[ packageName ] >', packageName)
   if (packageName) {
     return pkgs[packageName] ?? pkgs[`${PKG_PREFIX}/${packageName}`]
   } else {

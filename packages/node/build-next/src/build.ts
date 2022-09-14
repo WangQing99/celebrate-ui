@@ -12,6 +12,7 @@ import type { Options } from 'tsup'
 
 export async function build(packageName?: string, userConfig?: BuildOptions) {
   const pkg = await getPackage(packageName)
+  console.info('🚀 ~ log:pkg ----->', pkg)
   if (!pkg) throw new Error("pkg doesn't exist!")
 
   const config = await importConfig(pkg, userConfig)
@@ -44,10 +45,11 @@ export async function build(packageName?: string, userConfig?: BuildOptions) {
   process.chdir(pkg.dir)
   const tasks: Array<Promise<void>> = []
   if (config.minify === false || config.minify === 'both') {
+    console.info('🚀 ~ log:options ----->', options)
     tasks.push(
       tsup({
         ...options,
-        name: 'ep-cli-tsup',
+        name: 'ce-cli-tsup',
         esbuildOptions(options) {
           options.entryNames = `[dir]/[name]`
         },
@@ -58,7 +60,7 @@ export async function build(packageName?: string, userConfig?: BuildOptions) {
     tasks.push(
       tsup({
         ...options,
-        name: 'ep-cli-tsup-minify',
+        name: 'ce-cli-tsup-minify',
         minify: true,
         esbuildOptions(options) {
           options.entryNames = `[dir]/[name].min`

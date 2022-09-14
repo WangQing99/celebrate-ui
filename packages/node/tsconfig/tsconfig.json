@@ -9,7 +9,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": false,
-    "types": [],
+    "types": ["node"],
 
     "strict": true,
     "noUnusedLocals": true,
