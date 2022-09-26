@@ -11,8 +11,8 @@
     "vue",
     "components"
   ],
-  "author": "WQ",
   "license": "MIT",
+  "author": "WQ",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

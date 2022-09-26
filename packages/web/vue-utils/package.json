@@ -1,5 +1,5 @@
 {
-  "name": "@celebrate-ui/utils",
+  "name": "@celebrate-ui/vue-utils",
   "version": "1.0.0",
   "description": "Vue component for Celebrate UI.",
   "keywords": [
@@ -11,16 +11,12 @@
     "vue",
     "components"
   ],
-  "author": "WQ",
   "license": "MIT",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "author": "WQ",
+  "main": "src/index.ts",
+  "types": "index.d.ts",
   "scripts": {},
   "peerDependencies": {
     "vue": "^3.2.0"
-  },
-  "devDependencies": {
-    "vue": "^3.2.31"
   }
 }

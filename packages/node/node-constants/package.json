@@ -2,7 +2,6 @@
   "name": "@celebrate-ui/node-constants",
   "version": "1.0.0",
   "description": "ESLint config for Celebrate UI.",
-  "type": "module",
   "keywords": [
     "celebrate-ui",
     "celebrate",
@@ -13,11 +12,10 @@
     "eslint-config"
   ],
   "license": "MIT",
+  "type": "module",
   "files": [
     "dist"
   ],
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "dev": "./src/index.ts",
@@ -26,7 +24,12 @@
     },
     "./*": "./*"
   },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "clean": "rimraf ./dist"
+    "build": "unbuild",
+    "dev": "pnpm run stub",
+    "stub": "unbuild --stub"
   }
 }

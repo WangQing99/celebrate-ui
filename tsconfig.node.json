@@ -3,6 +3,7 @@
   "include": [
     "packages/node/**/*",
     "packages/node/**/*.json",
+    "packages/web/**/*",
     "**/build.config.ts",
     "**/scripts/**/*"
   ],

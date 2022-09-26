@@ -11,20 +11,23 @@
     "vue",
     "components"
   ],
-  "author": "WQ",
   "license": "MIT",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "author": "WQ",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "unpkg": "index.js",
+  "jsdelivr": "index.js",
   "scripts": {},
   "peerDependencies": {
     "vue": "^3.2.0"
   },
+  "types": "index.d.ts",
+  "sideEffects": false,
+  "dependencies": {
+    "@celebrate-ui/vue-utils": "workspace:*"
+  },
   "devDependencies": {
     "element-plus": "^2.2.15",
     "vue": "^3.2.31"
-  },
-  "dependencies": {
-    "@celebrate-ui/utils": "workspace:*"
   }
 }

@@ -1,4 +1,4 @@
-import { withInstall } from '@celebrate-ui/utils'
+import { withInstall } from '@celebrate-ui/vue-utils'
 
 import Button from './src/button.vue'
 

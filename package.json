@@ -8,19 +8,26 @@
   },
   "scripts": {
     "dev": "pnpm -C playground dev",
-    "build": "run-s build:node build:web",
+    "build": "pnpm run -C packages/node/build start",
     "build:node": "pnpm run --filter \"./packages/node/*\" --stream build",
     "build:web": "pnpm run --filter \"./packages/web/*\" --stream build",
     "ci:build": "CE_BUILD=dev nr build:node",
     "clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
-    "clean:dist": "rimraf dist"
+    "clean:dist": "rimraf dist",
+    "stub": "pnpm run -r --parallel stub"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix"
   },
   "devDependencies": {
     "@celebrate-ui/cli": "workspace:*",
     "@celebrate-ui/eslint-config": "workspace:*",
     "@celebrate-ui/tsconfig": "workspace:*",
+    "@types/fs-extra": "^9.0.13",
     "@types/gulp": "^4.0.9",
     "@types/node": "*",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "@vitejs/plugin-vue-jsx": "^1.3.10",
     "@vue/runtime-core": "^3.2.38",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
@@ -36,8 +43,5 @@
         "react-dom"
       ]
     }
-  },
-  "lint-staged": {
-    "*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix"
   }
 }

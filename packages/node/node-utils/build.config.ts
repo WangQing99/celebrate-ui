@@ -1,5 +1,10 @@
-import { defineConfig } from '@celebrate-ui/build/config'
+import { defineBuildConfig } from 'unbuild'
 
-export default defineConfig({
-  platform: 'node',
+export default defineBuildConfig({
+  entries: ['src/index'],
+  clean: true,
+  declaration: true,
+  rollup: {
+    emitCJS: true,
+  },
 })

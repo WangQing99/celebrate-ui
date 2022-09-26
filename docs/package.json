@@ -1,15 +1,15 @@
 {
-  "name": "@celebrate-ui/docs",
   "private": true,
+  "name": "@celebrate-ui/docs",
   "version": "1.0.0",
   "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "element-plus": "^2.2.15",
     "vitepress": "0.22.4",
