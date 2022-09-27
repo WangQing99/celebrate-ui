@@ -10,5 +10,3 @@ import { ElButton } from 'element-plus'
 
 const message = ref('')
 </script>
-
-<style scoped></style>
