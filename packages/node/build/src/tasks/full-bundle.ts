@@ -59,7 +59,6 @@ async function buildFullEntry(minify: boolean) {
       })
     )
   }
-
   const bundle = await rollup({
     input: path.resolve(ceRoot, 'index.ts'),
     plugins,

@@ -15,11 +15,13 @@
     "vue": "^3.2.25"
   },
   "dependencies": {
+    "@celebrate-ui/node-constants": "workspace:*",
+    "@celebrate-ui/node-utils": "workspace:*",
     "@pnpm/find-workspace-packages": "^4.0.0",
     "@pnpm/logger": "^4.0.0",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
-    "@vitejs/plugin-vue": "^2.3.3",
+    "@vitejs/plugin-vue": "3.1.0",
     "@vitejs/plugin-vue-jsx": "^2.0.1",
     "chalk": "^5.0.1",
     "components-helper": "^2.1.2",
@@ -29,17 +31,15 @@
     "fs-extra": "^10.1.0",
     "gulp": "^4.0.2",
     "lodash": "^4.17.21",
-    "rollup": "^2.79.1",
+    "rollup": "~2.78.0",
     "rollup-plugin-esbuild": "^4.10.1",
     "ts-morph": "^16.0.0",
     "unplugin-vue-define-options": "^0.11.2"
   },
   "devDependencies": {
-    "@celebrate-ui/node-constants": "workspace:*",
-    "@celebrate-ui/node-utils": "workspace:*",
     "@esbuild-kit/cjs-loader": "^2.3.3",
-    "@pnpm/types": "^8.5.0",
-    "unbuild": "^0.8.10",
-    "vue": "^3.2.31"
+    "@pnpm/types": "^8.4.0",
+    "unbuild": "^0.7.4",
+    "vue": "^3.2.37"
   }
 }

@@ -4,11 +4,12 @@
     "packages/node/**/*",
     "packages/node/**/*.json",
     "packages/web/**/*",
-    "**/build.config.ts",
-    "**/scripts/**/*"
+    "**/build.config.ts"
   ],
   "exclude": ["**/__tests__/**", "**/tests/**", "**/dist"],
   "compilerOptions": {
-    "composite": true
+    "composite": true,
+    "lib": ["ESNext"],
+    "skipLibCheck": true
   }
 }

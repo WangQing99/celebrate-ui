@@ -1,10 +1,7 @@
-<script setup lang='ts'>
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-	<button>按钮</button>
+  <button>按钮</button>
 </template>
 
-<style scoped lang='scss'>
-</style>
+<style scoped lang="scss"></style>
