@@ -12,7 +12,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "removeComments": false,
-    "rootDir": ".",
+    "rootDir": "../../../..",
     "types": [],
     "baseUrl": "../../../..",
     "paths": {

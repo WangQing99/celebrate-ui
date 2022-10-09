@@ -3,7 +3,7 @@ import { resolve } from 'path'
 export const projRoot = resolve(__dirname, '..', '..', '..', '..')
 export const pkgRoot = resolve(projRoot, 'packages')
 export const ceRoot = resolve(pkgRoot, 'celebrate-ui')
-export const buildRoot = resolve(projRoot, 'node', 'build')
+export const buildRoot = resolve(pkgRoot, 'node', 'build')
 
 /** `/dist` */
 export const buildOutput = resolve(projRoot, 'dist')

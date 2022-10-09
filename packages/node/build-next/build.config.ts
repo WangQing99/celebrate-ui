@@ -1,8 +1,10 @@
-import { defineConfig } from './src/config'
+import { defineBuildConfig } from 'unbuild'
 
-export default defineConfig({
-  platform: 'node',
-  tsup: {
-    entry: ['src/index.ts', 'src/config.ts'],
+export default defineBuildConfig({
+  entries: ['src/index'],
+  clean: true,
+  declaration: true,
+  rollup: {
+    emitCJS: true,
   },
 })
