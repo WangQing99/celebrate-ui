@@ -6,7 +6,7 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import esbuild from 'rollup-plugin-esbuild'
 import glob from 'fast-glob'
-import { ceRoot, excludeFiles, pkgRoot } from '@celebrate-ui/node-utils'
+import { ceRoot, excludeFiles, webRoot } from '@celebrate-ui/node-utils'
 import { generateExternal, writeBundles } from '../utils'
 import { CelebrateUIAlias } from '../plugins/celebrate-ui-alias'
 import { buildConfigEntries, target } from '../build-info'
@@ -16,7 +16,7 @@ import type { OutputOptions } from 'rollup'
 export const buildModules = async () => {
   const input = excludeFiles(
     await glob('**/*.{js,ts,vue}', {
-      cwd: pkgRoot,
+      cwd: webRoot,
       absolute: true,
       onlyFiles: true,
     })
