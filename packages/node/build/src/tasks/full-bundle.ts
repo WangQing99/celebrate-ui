@@ -27,7 +27,7 @@ const banner = `/*! ${PKG_BRAND_NAME} v${version} */\n`
 
 async function buildFullEntry(minify: boolean) {
   const plugins: Plugin[] = [
-    CelebrateUIAlias(),
+    // CelebrateUIAlias(),
     DefineOptions(),
     vue({
       isProduction: true,
@@ -60,7 +60,7 @@ async function buildFullEntry(minify: boolean) {
     )
   }
   const bundle = await rollup({
-    input: path.resolve(ceRoot, 'index.ts'),
+    input: path.resolve(ceRoot, 'src/index.ts'),
     plugins,
     external: await generateExternal({ full: true }),
     treeshake: true,
