@@ -12,7 +12,7 @@ import {
   PKG_CAMELCASE_NAME,
 } from '@celebrate-ui/node-constants'
 import { ceOutput, ceRoot } from '@celebrate-ui/node-utils'
-import { version } from '../../../../web/celebrate-ui/src'
+import { version } from '../../../../web/celebrate-ui/src/version'
 import { CelebrateUIAlias } from '../plugins/celebrate-ui-alias'
 import {
   formatBundleFilename,

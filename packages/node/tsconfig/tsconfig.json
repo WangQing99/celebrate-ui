@@ -1,22 +1,25 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "target": "es2018",
-    "module": "esnext",
-    "sourceMap": false,
-    "moduleResolution": "node",
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext"],
     "allowJs": false,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": false,
+    "types": [],
+
     "strict": true,
     "noUnusedLocals": true,
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "removeComments": false,
-    "rootDir": "../../../..",
-    "types": [],
-    "baseUrl": "../../../..",
+    "skipLibCheck": true,
+
+    "outDir": "dist",
+    "baseUrl": "../../..",
     "paths": {
-      "@celebrate-ui/*": ["packages/*"]
+      "celebrate-ui": ["packages/web/celebrate-ui/src/index"],
+      "@celebrate-ui/*": ["packages/web/*/src", "packages/node/*/src"]
     }
   }
 }

@@ -5,8 +5,5 @@
     "packages/web/*/package.json",
     "packages/**/__tests__/**/*",
     "packages/**/tests/**/*"
-  ],
-  "compilerOptions": {
-    "composite": true
-  }
+  ]
 }

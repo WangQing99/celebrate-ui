@@ -6,5 +6,8 @@
     "packages/web/celebrate-ui/src/version.ts",
     "packages/web/celebrate-ui/package.json"
   ],
-  "exclude": ["**/__tests__/**", "**/tests/**", "**/dist"]
+  "exclude": ["**/__tests__/**", "**/tests/**", "**/dist"],
+  "compilerOptions": {
+    "composite": true
+  }
 }
