@@ -6,6 +6,7 @@ import vue from '@vitejs/plugin-vue'
 import DefineOptions from 'unplugin-vue-define-options/rollup'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import esbuild, { minify as minifyPlugin } from 'rollup-plugin-esbuild'
+import json from '@rollup/plugin-json'
 import { parallel } from 'gulp'
 import {
   PKG_BRAND_NAME,
@@ -27,7 +28,7 @@ const banner = `/*! ${PKG_BRAND_NAME} v${version} */\n`
 
 async function buildFullEntry(minify: boolean) {
   const plugins: Plugin[] = [
-    // CelebrateUIAlias(),
+    CelebrateUIAlias(),
     DefineOptions(),
     vue({
       isProduction: true,
@@ -37,6 +38,7 @@ async function buildFullEntry(minify: boolean) {
       extensions: ['.mjs', '.js', '.json', '.ts'],
     }),
     commonjs(),
+    json(),
     esbuild({
       exclude: [],
       sourceMap: minify,

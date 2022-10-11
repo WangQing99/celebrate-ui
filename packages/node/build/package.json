@@ -20,6 +20,7 @@
     "@pnpm/find-workspace-packages": "^4.0.0",
     "@pnpm/logger": "^4.0.0",
     "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-json": "^5.0.0",
     "@rollup/plugin-node-resolve": "^14.1.0",
     "@vitejs/plugin-vue": "3.1.0",
     "@vitejs/plugin-vue-jsx": "^2.0.1",

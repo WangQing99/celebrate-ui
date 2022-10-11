@@ -83,6 +83,7 @@ importers:
       '@pnpm/logger': ^4.0.0
       '@pnpm/types': ^8.4.0
       '@rollup/plugin-commonjs': ^22.0.2
+      '@rollup/plugin-json': ^5.0.0
       '@rollup/plugin-node-resolve': ^14.1.0
       '@vitejs/plugin-vue': 3.1.0
       '@vitejs/plugin-vue-jsx': ^2.0.1
@@ -106,6 +107,7 @@ importers:
       '@pnpm/find-workspace-packages': 4.0.41_@pnpm+logger@4.0.0
       '@pnpm/logger': 4.0.0
       '@rollup/plugin-commonjs': 22.0.2_rollup@2.78.1
+      '@rollup/plugin-json': 5.0.0_rollup@2.78.1
       '@rollup/plugin-node-resolve': 14.1.0_rollup@2.78.1
       '@vitejs/plugin-vue': 3.1.0_vue@3.2.40
       '@vitejs/plugin-vue-jsx': 2.0.1_vue@3.2.40
@@ -1896,6 +1898,19 @@ packages:
       '@rollup/pluginutils': 3.1.0_rollup@2.78.1
       rollup: 2.78.1
     dev: true
+
+  /@rollup/plugin-json/5.0.0_rollup@2.78.1:
+    resolution: {integrity: sha512-LsWDA5wJs/ggzakVuKQhZo7HPRcQZgBa3jWIVxQSFxaRToUGNi8ZBh3+k/gQ+1eInVYJgn4WBRCUkmoDrmmGzw==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@rollup/pluginutils': 4.2.1
+      rollup: 2.78.1
+    dev: false
 
   /@rollup/plugin-node-resolve/13.3.0_rollup@2.78.1:
     resolution: {integrity: sha512-Lus8rbUo1eEcnS4yTFKLZrVumLPY+YayBdWXgFSHYhTT2iJbMhoaaBL3xl5NCdeRytErGr8tZ0L71BMRmnlwSw==}
