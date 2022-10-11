@@ -49,17 +49,17 @@ export default series(
 
   parallel(
     runTask('buildModules'),
-    runTask('buildFullBundle'),
-    runTask('generateTypesDefinitions')
+    runTask('buildFullBundle')
+    // runTask('generateTypesDefinitions')
     // series(
     //   withTaskName('buildThemeChalk', () =>
     //     run('pnpm run -C packages/theme-chalk build')
     //   ),
     //   copyFullStyle
     // )
-  ),
+  )
 
-  parallel(copyTypesDefinitions, copyFiles)
+  // parallel(copyTypesDefinitions, copyFiles)
 )
 
 export * from './src'

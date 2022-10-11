@@ -5,6 +5,7 @@ import DefineOptions from 'unplugin-vue-define-options/rollup'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import esbuild from 'rollup-plugin-esbuild'
+import json from '@rollup/plugin-json'
 import glob from 'fast-glob'
 import { ceRoot, excludeFiles, webRoot } from '@celebrate-ui/node-utils'
 import { generateExternal, writeBundles } from '../utils'
@@ -34,6 +35,7 @@ export const buildModules = async () => {
         extensions: ['.mjs', '.js', '.json', '.ts'],
       }),
       commonjs(),
+      json(),
       esbuild({
         sourceMap: true,
         target,
