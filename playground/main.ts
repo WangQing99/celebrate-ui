@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import CelebrateUI from '../dist/celebrate-ui'
-import 'element-plus/dist/index.css'
+import '../dist/celebrate-ui/dist/index.css'
 ;(async () => {
   const apps = import.meta.glob('./src/*.vue')
   const name = location.pathname.replace(/^\//, '') || 'App'

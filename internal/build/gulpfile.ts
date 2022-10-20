@@ -50,7 +50,8 @@ export default series(
   parallel(
     runTask('buildModules'),
     runTask('buildFullBundle'),
-    // runTask('generateTypesDefinitions')
+    runTask('generateTypesDefinitions'),
+    runTask('buildHelper'),
     series(
       withTaskName('buildThemeChalk', () =>
         run('pnpm run -C packages/theme-chalk build')
@@ -58,9 +59,9 @@ export default series(
       copyFullStyle
     ),
     series(copyFiles)
-  )
+  ),
 
-  // parallel(copyTypesDefinitions, copyFiles)
+  parallel(copyTypesDefinitions, copyFiles)
 )
 
 export * from './src'

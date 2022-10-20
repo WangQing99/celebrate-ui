@@ -1,6 +1,11 @@
 {
   "private": true,
   "packageManager": "pnpm@7.12.2",
+  "workspaces": [
+    "packages/*",
+    "playground",
+    "docs"
+  ],
   "description": "Celebrate UI Monorepo.",
   "license": "MIT",
   "scripts": {
@@ -48,7 +53,7 @@
     "tsx": "^3.6.0",
     "type-fest": "^2.14.0",
     "typescript": "^4.7.4",
-    "unplugin-vue-define-options": "^0.11.1",
+    "unplugin-vue-define-options": "0.6.1",
     "vitest": "^0.22.1",
     "vue": "^3.2.37"
   },

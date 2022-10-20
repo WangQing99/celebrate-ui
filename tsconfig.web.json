@@ -7,8 +7,5 @@
     "**/__tests__/**/*",
     "**/gulpfile.ts",
     "**/*.md"
-  ],
-  "compilerOptions": {
-    "composite": true
-  }
+  ]
 }
