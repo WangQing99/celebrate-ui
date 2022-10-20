@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext"],
+    "allowJs": false,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": false,
+    "types": [],
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+
+    "outDir": "dist",
+    "baseUrl": "../../..",
+    "paths": {
+      "@celebrate-ui/*": ["packages/*"]
+    }
+  }
+}

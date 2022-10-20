@@ -1,14 +1,11 @@
 <template>
+  <ce-button />
   <div class="play-container">
     <h1>Hello, Element Plus!</h1>
-    <ElementPlus class="icon" />
   </div>
 </template>
 
-<script setup lang="ts">
-import { ElementPlus } from '@element-plus/icons-vue'
-// code here
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 .play-container {

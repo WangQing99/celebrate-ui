@@ -1,0 +1,32 @@
+{
+  "name": "@celebrate-ui/theme-chalk",
+  "version": "0.1.0",
+  "description": "Celebrate component chalk theme.",
+  "keywords": [
+    "vue-components",
+    "celebrate-ui",
+    "theme-chalk",
+    "theme-light"
+  ],
+  "license": "MIT",
+  "author": "WQ",
+  "main": "index.css",
+  "unpkg": "index.css",
+  "jsdelivr": "index.css",
+  "style": "index.css",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "gulp --require @esbuild-kit/cjs-loader"
+  },
+  "devDependencies": {
+    "@esbuild-kit/cjs-loader": "^2.3.3",
+    "@types/gulp-autoprefixer": "^0.0.33",
+    "@types/gulp-clean-css": "^4.3.0",
+    "@types/gulp-rename": "^2.0.1",
+    "@types/gulp-sass": "^5.0.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0"
+  }
+}

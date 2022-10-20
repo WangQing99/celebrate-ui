@@ -1,0 +1,12 @@
+{
+  "name": "@celebrate-ui/base-components",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "module": "index.ts",
+  "unpkg": "index.js",
+  "jsdelivr": "index.js",
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "sideEffects": false
+}

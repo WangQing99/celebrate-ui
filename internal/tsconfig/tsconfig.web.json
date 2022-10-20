@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2019", "DOM"],
+    "jsx": "preserve",
+    "declaration": true
+  },
+  "types": ["unplugin-vue-define-options"],
+  "vueCompilerOptions": {
+    "target": 3
+  }
+}

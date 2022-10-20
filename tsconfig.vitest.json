@@ -1,9 +1,5 @@
 {
   "extends": "@celebrate-ui/tsconfig/tsconfig.vitest.json",
-  "include": [
-    "packages/web/*/src/**/*",
-    "packages/web/*/package.json",
-    "packages/**/__tests__/**/*",
-    "packages/**/tests/**/*"
-  ]
+  "include": ["packages", "vitest.setup.ts", "typings/env.d.ts"],
+  "exclude": ["node_modules", "dist", "**/*.md"]
 }
