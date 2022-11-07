@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'node:path'
 import helper from 'components-helper'
 import {
   ceOutput,
@@ -18,7 +18,7 @@ import type {
 const reComponentName: ReComponentName = (title: string) =>
   `ce-${title
     .replace(/\B([A-Z])/g, '-$1')
-    .replace(/[ ]+/g, '-')
+    .replace(/ +/g, '-')
     .toLowerCase()}`
 
 const reDocUrl: ReDocUrl = (fileName, header) => {
@@ -55,7 +55,7 @@ const reAttribute: ReAttribute = (value, key) => {
     return 'model-value'
   } else if (key === 'Attribute') {
     return str
-      .replaceAll(/\s*[\\*]\s*/g, '')
+      .replaceAll(/\s*[*\\]\s*/g, '')
       .replaceAll(/\s*<.*>\s*/g, '')
       .replaceAll(/\s*\(.*\)\s*/g, '')
       .replaceAll(/\B([A-Z])/g, '-$1')
@@ -67,16 +67,16 @@ const reAttribute: ReAttribute = (value, key) => {
       .replace(/\(.*\)/g, '')
       .toLowerCase()
   } else if (key === 'Accepted Values') {
-    return /\[.+\]\(.+\)/.test(str) || /^\*$/.test(str)
+    return /\[.+]\(.+\)/.test(str) || /^\*$/.test(str)
       ? undefined
       : str.replace(/`/g, '')
   } else if (key === 'Subtags') {
     return str
       ? `ce-${str
-        .replaceAll(/\s*\/\s*/g, '/ce-')
-        .replaceAll(/\B([A-Z])/g, '-$1')
-        .replaceAll(/\s+/g, '-')
-        .toLowerCase()}`
+          .replaceAll(/\s*\/\s*/g, '/ce-')
+          .replaceAll(/\B([A-Z])/g, '-$1')
+          .replaceAll(/\s+/g, '-')
+          .toLowerCase()}`
       : undefined
   } else {
     return str

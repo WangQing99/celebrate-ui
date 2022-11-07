@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": ["@celebrate-ui/eslint-config"]
+  "extends": ["@wang-qing/eslint-config"]
 }

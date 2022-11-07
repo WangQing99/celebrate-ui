@@ -9,7 +9,7 @@
     // playground
     "playground/main.ts",
     "playground/env.d.ts",
-    "playground/src/**/*"
+    "playground/**/*"
   ],
   "compilerOptions": {
     "allowJs": true,

@@ -1,5 +1,5 @@
 <template>
-  <div  id="test-button">
+  <div id="test-button">
     <el-button @click="handleClick"> 测试按钮 </el-button>
   </div>
 </template>
@@ -11,7 +11,7 @@ defineOptions({
   name: 'CeButton',
 })
 
-function handleClick(event) {
+function handleClick(event: any) {
   console.info('🚀 ~ log:测试按钮event ----->', event)
 }
 </script>

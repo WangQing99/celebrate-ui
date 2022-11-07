@@ -12,6 +12,9 @@
     "components"
   ],
   "license": "MIT",
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "types": "es/index.d.ts",
   "exports": {
     ".": {
       "require": "./lib/index.js",
@@ -26,9 +29,6 @@
     "./lib/*": "./lib/*.js",
     "./*": "./*"
   },
-  "main": "lib/index.js",
-  "module": "es/index.mjs",
-  "types": "es/index.d.ts",
   "unpkg": "dist/index.full.js",
   "jsdelivr": "dist/index.full.js",
   "publishConfig": {
@@ -43,15 +43,11 @@
     "lib/components/*/style/*"
   ],
   "peerDependencies": {
-    "vue": "^3.2.0",
-    "element-plus": "^2.2.18"
+    "element-plus": "^2.2.18",
+    "vue": "^3.2.0"
   },
-  "dependencies": {
-
-  },
-  "devDependencies": {
-
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "vetur": {
     "tags": "tags.json",
     "attributes": "attributes.json"

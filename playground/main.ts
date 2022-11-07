@@ -1,16 +1,14 @@
 import { createApp } from 'vue'
-import CelebrateUI from '../dist/celebrate-ui'
-import '../dist/celebrate-ui/dist/index.css'
-;(async () => {
-  const apps = import.meta.glob('./src/*.vue')
-  const name = location.pathname.replace(/^\//, '') || 'App'
-  const file = apps[`./src/${name}.vue`]
-  if (!file) {
-    location.pathname = 'App'
-    return
-  }
-  const App = ((await file()) as any).default
+import CelebrateUI from '../packages/celebrate-ui/index'
+import '../packages/theme-chalk/src/index.scss'
+import App from './App.vue'
+import { setupRouter } from './router'
+;(() => {
   const app = createApp(App)
+
   app.use(CelebrateUI)
+
+  setupRouter(app)
+
   app.mount('#app')
 })()

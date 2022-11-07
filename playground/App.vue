@@ -1,8 +1,5 @@
 <template>
-  <ce-button />
-  <div class="play-container">
-    <h1>Hello, Element Plus!</h1>
-  </div>
+  <RouterView />
 </template>
 
 <script setup lang="ts"></script>
