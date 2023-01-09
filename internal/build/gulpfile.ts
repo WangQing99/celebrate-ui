@@ -43,6 +43,7 @@ export const copyFullStyle = async () => {
   )
 }
 
+// @eslint-ignore-next-line
 export default series(
   withTaskName('clean', () => run('pnpm run clean')),
   withTaskName('createOutput', () => mkdir(ceOutput, { recursive: true })),

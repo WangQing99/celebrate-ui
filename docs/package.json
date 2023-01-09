@@ -8,11 +8,11 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vitepress dev"
+    "dev": "vitepress dev docs"
   },
   "devDependencies": {
     "element-plus": "^2.2.15",
-    "vitepress": "0.22.4",
+    "vitepress": "1.0.0-alpha.30",
     "vitepress-theme-demoblock": "^1.4.2"
   }
 }

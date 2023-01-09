@@ -1,6 +1,6 @@
 {
   "extends": "@celebrate-ui/tsconfig/tsconfig.docs.json",
-  "include": ["docs", "docs/.vitepress"],
+  "include": ["docs", "docs/docs/.vitepresspress"],
   "exclude": [],
   "compilerOptions": {
     "composite": true

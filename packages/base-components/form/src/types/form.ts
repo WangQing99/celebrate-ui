@@ -2,6 +2,8 @@ import type { Recordable } from '@celebrate-ui/utils'
 import type { ComponentType } from './index'
 import type { VNode } from 'vue'
 
+export type FieldMapToTime = [string, [string, string], string?][]
+
 export interface RenderCallbackParams {
   schema: FormSchema
   values: Recordable
@@ -10,8 +12,11 @@ export interface RenderCallbackParams {
 }
 
 export interface FormProps {
-  // 用于合并到动态控件表单项中的函数值
-  mergeDynamicData?: Recordable
+  // 表单配置规则
+  schemas?: FormSchema[]
+  // 时间间隔字段被映射到多个
+  fieldMapToTime?: FieldMapToTime
+  transformDateFunc?: (date: any) => string
 }
 
 export interface FormSchema {
@@ -19,10 +24,15 @@ export interface FormSchema {
   field: string
   // 内部值变化触发的事件名称 默认change
   changeEvent?: string
+  // v-model 绑定的变量名 默认值
+  valueField?: string
   // 标签名称
-  label: string | VNode
+  label: string
   // 要渲染的组件类型
   component: ComponentType
+
+  // 默认值
+  defaultValue?: any
 
   // form-item 渲染的内容
   render?: (
